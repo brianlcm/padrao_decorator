@@ -15,9 +15,16 @@ public abstract class AutomovelDecorator implements Automovel {
         this.automovel = automovel;
     }
 
-    @Override
+    public abstract float getAcrescimoPreco();
+
+    public float getPreco() {
+        return this.automovel.getPreco() + getAcrescimoPreco();
+    }
+
+    public abstract String getAcrescimoInfo();
+
     public String getInfo() {
-        return infos;
+        return this.automovel.getInfo() + "/" + this.getAcrescimoInfo();
     }
 
     public void setInfo(String infos) {

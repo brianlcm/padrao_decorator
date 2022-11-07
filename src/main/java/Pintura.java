@@ -1,17 +1,17 @@
-public class Direcao extends AutomovelDecorator {
+public class Pintura extends AutomovelDecorator {
 
-    public Direcao(Automovel automovel) {
+    public Pintura(Automovel automovel) {
         super(automovel);
     }
 
     @Override
     public float getAcrescimoPreco() {
-        return 300;
+        return 150;
     }
 
     @Override
     public String getAcrescimoInfo() {
-        return "Direção";
+        return "Pintura";
     }
 
 }

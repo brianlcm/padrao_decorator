@@ -1,17 +1,17 @@
-public class Direcao extends AutomovelDecorator {
+public class Aerofolio extends AutomovelDecorator {
 
-    public Direcao(Automovel automovel) {
+    public Aerofolio(Automovel automovel) {
         super(automovel);
     }
 
     @Override
     public float getAcrescimoPreco() {
-        return 300;
+        return 500;
     }
 
     @Override
     public String getAcrescimoInfo() {
-        return "Direção";
+        return "Aerofólio";
     }
 
 }
