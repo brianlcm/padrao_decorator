@@ -60,4 +60,60 @@ class AutomovelTest {
         assertEquals(1950.0f, automovel.getPreco());
     }
 
+    @Test
+    void deveRetornarEstruturaCarro() {
+        Automovel automovel = new Carro();
+
+        assertEquals("Carro", automovel.getInfo());
+    }
+
+    @Test
+    void deveRetornarEstruturaCarroComDirecao() {
+        Automovel automovel = new Direcao(new Carro());
+
+        assertEquals("Carro/Direção", automovel.getInfo());
+    }
+
+    @Test
+    void deveRetornarEstruturaCarroComPintura() {
+        Automovel automovel = new Pintura(new Carro());
+
+        assertEquals("Carro/Pintura", automovel.getInfo());
+    }
+
+    @Test
+    void deveRetornarEstruturaCarroComAerofolio() {
+        Automovel automovel = new Aerofolio(new Carro());
+
+        assertEquals("Carro/Aerofólio", automovel.getInfo());
+    }
+
+    @Test
+    void deveRetornarEstruturaCarroComDirecaoMaisPintura() {
+        Automovel automovel = new Pintura(new Direcao (new Carro()));
+
+        assertEquals("Carro/Direção/Pintura", automovel.getInfo());
+    }
+
+    @Test
+    void deveRetornarEstruturaCarroComDirecaoMaisAerofolio() {
+        Automovel automovel = new Aerofolio(new Direcao (new Carro()));
+
+        assertEquals("Carro/Direção/Aerofólio", automovel.getInfo());
+    }
+
+    @Test
+    void deveRetornarEstruturaCarroComPinturaMaisAerofolio() {
+        Automovel automovel = new Aerofolio(new Pintura (new Carro()));
+
+        assertEquals("Carro/Pintura/Aerofólio", automovel.getInfo());
+    }
+
+    @Test
+    void deveRetornarEstruturaCarroComDirecaoMaisPinturaMaisAerofolio() {
+        Automovel automovel = new Aerofolio (new Pintura(new Direcao (new Carro())));
+
+        assertEquals("Carro/Direção/Pintura/Aerofólio", automovel.getInfo());
+    }
+
 }

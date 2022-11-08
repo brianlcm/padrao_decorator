@@ -1,6 +1,5 @@
 public class Carro implements Automovel {
     public float preco;
-    public String Info;
 
     public Carro() {
     }
@@ -11,5 +10,5 @@ public class Carro implements Automovel {
 
     public float getPreco(){return preco;}
 
-    public String getInfo(){return Info;}
+    public String getInfo(){return "Carro";}
 }
